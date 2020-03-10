@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.15)
+project(ComOCamp2)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(ComO_01 ComO_01.cpp)
+add_executable(ComO_02 ComO_02.cpp)
+add_executable(ComO_03 ComO_03.cpp)
+add_executable(ComO_04 ComO_04.cpp)
+add_executable(ComO_02Test ComO_02Test.cpp)
+
+add_executable(Test Test.cpp)
+
+add_executable(ComO_05 ComO_05.cpp)
+add_executable(Paper_01 Stack/Paper_01.cpp)
+add_executable(Paper_02 Stack/Paper_02.cpp)
+add_executable(ComO_06 ComO_06.cpp)
