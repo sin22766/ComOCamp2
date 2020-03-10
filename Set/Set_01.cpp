@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void printSet(const set<int> _set) {
+void printSet(set<int> _set) {
     for (int i : _set) {
         cout << i << " ";
     }
