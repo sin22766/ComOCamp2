@@ -5,27 +5,35 @@
 
 using namespace std;
 
+bool comparePlane(pair<int, int> p1, pair<int, int> p2) {
+    return p1.second < p2.second;
+}
+
 int main() {
     int n;
     cin >> n;
-    vector<int> all_plane;
-    vector<pair<int, int>> airport;
     stack<pair<int, int>> runway;
+    vector<pair<int, int>> all;
     for (int i = 0; i < n; ++i) {
         pair<int, int> plane;
-        cin >> plane.first >> plane.second;
-        all_plane.push_back(plane.first);
-        all_plane.push_back(plane.second);
-        airport.push_back(plane);
+        plane.first = i;
+        cin >> plane.second;
+        all.push_back(plane);
+        cin >> plane.second;
+        all.push_back(plane);
     }
-    sort(all_plane.begin(), all_plane.end(), greater<int>());
-    for (int i: all_plane) {
-        for (int j = 0; j < airport.size(); ++j) {
-
-        }
-        if (airport.) {
-
+    sort(all.begin(), all.end(), comparePlane);
+    for (pair<int, int> i:all) {
+        if (runway.empty()) {
+            runway.push(i);
+        } else {
+            if (runway.top().first == i.first) {
+                runway.pop();
+            } else {
+                runway.push(i);
+            }
         }
     }
+    (runway.empty()) ? cout << "Yes" : cout << "No";
     return 0;
 }
